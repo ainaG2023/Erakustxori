@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Viajes Trujillo</title>
+        <link rel="icon" href="icono.png" type="image/png">
+        <div id="back"><a href="../indexcopia.html"><img height="85px" width="85px" id="back" src="../R.png" alt="back"/></a></div>
+        <style>
+            
+/* fondo de pantalla */
+            #back{float: left;}
+            body {
+                animation: changeBG 30s infinite;
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+            }
+
+            @keyframes changeBG {
+                0%   {background-image: url("fondo0.jpg");}
+                20%  {background-image: url("fondo1.jpg");}
+                40%  {background-image: url("fondo2.jpg");}
+                60% {background-image: url("fondo3.jpg");}
+                80% {background-image: url("fondo4.jpg");}
+                100% {background-image: url("fondo0.jpg");}
+            }
+            
+/* Menu y todo lo relacionado */
+            .menu {
+                background-color: rgba(0, 0, 0, 0.65);
+                position: fixed;
+                width: 100%;
+                height: 82px;
+                top: 0;
+                left: 0;
+                right: 0;
+                
+            }
+            
+            .menu a {
+                color: rgb(255, 255, 255);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 16px;
+                font-weight: bold; 
+                text-decoration: none;
+                position: relative;
+                padding: 32px 32px;
+                vertical-align: middle;
+                
+            }
+            .menu .activo {
+                background-color: rgba(0, 0, 0, 0.85);
+            }
+
+            .menu img {
+                width: auto;
+                height: 82px;
+                display: inline;
+                padding: 0;
+                vertical-align: middle;
+            }
+
+            .menu a:hover:not(:has(img)) {  
+                background-color: rgba(0, 0, 0, 0.85);
+            }
+
+/* Buscador que sale al abrir la pagina */
+
+            .buscador {
+                display: block;
+                background-color: rgba(255, 220, 220, 0.75);
+                margin-top: 50px;
+                margin-left: 240px;
+                margin-right: 240px;
+                margin-bottom: 160px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+                border-radius: 15px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: rgba(80, 80, 80, 0.9);
+            }
+
+            .buscador form {
+                color: rgb(50, 50, 50);
+            }
+           
+            .titulo {
+                text-align: left;
+                margin-left: 240px;
+                margin-top: 150px;
+                font-size: 12px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+
+            /* tamaños cuadrados */
+            input[type="text"], input[type="date"], input[type="submit"] {
+                display: block;
+                margin: 10px 0;
+                font-family: sans-serif;
+                font-size: 14px;
+                border: rgba(0, 0, 0, 0.4);
+            }
+
+            /* altura anchura cuadrados, no el texto en si */
+            input[type="text"], input[type="date"] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            /* Buscar vuelos boton */
+            input[type="submit"] {
+                width: 100%;
+                background-color: rgba(255, 140, 140, 0.95);
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: rgba(255, 80, 80, 0.95);;
+            }
+          
+/* segundo bloke, mejores ofertas */
+            .titulo-ofertas {
+                text-align: left;
+                margin-left: 240px;
+                margin-top: 150px;
+                font-size: 12px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: whitesmoke;
+            }
+
+            .mejores-ofertas {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                max-width: 1200px;
+                margin-left: 200px;
+                margin-right: 200px;
+            }
+
+            .mejores-ofertas a {
+                text-decoration: none;
+                color: black;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 18px;
+                
+            }
+
+            .caja {
+                width: 250px;
+                height: 200px;
+                background-color: rgba(255, 255, 255, 0.85);
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 15px;
+            }
+
+            .caja img {
+                width: auto;
+                height: 120px;
+                border-radius: 10px;
+            }
+            
+/* valoracion */
+            .valoracion {
+                display: flex;
+                background-color: rgba(0, 81, 255, 0.95);
+                color: white;
+                padding: 20px;
+                justify-content: space-around;
+                margin-top: 120px;
+                border-radius: 5px;
+            }
+            
+            .valoracion2 {
+                display: flex;
+                background-color: rgba(0, 81, 255, 0.95);
+                color: white;
+                padding: 20px;
+                justify-content: space-around;
+                margin-top: 0;
+                border-radius: 5px;
+            }
+
+            .valoracion-item {
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            .valoracion-item img {
+                            height: 50px;
+                            width: auto;
+                        }
+
+/* redes */
+            .redes {
+                display: flex;
+                background-color: whitesmoke;
+                color: black;
+                padding: 20px;
+                justify-content: space-around;
+                margin-top: 100px;
+                border-radius: 5px;
+                text-align: left;
+            }
+            .redes-item {
+                text-align: left;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .redes-item img {
+                width: auto;
+                height: 60px;
+            }
+
+
+/* terminos y condiciones*/
+
+            .terminosycondiciones {
+                background-color: grey;
+                position: relative;
+                width: auto;
+                height: 350px;
+                top: 100px;
+                left: 0;
+                right: 0; 
+                bottom: 0;
+                border-radius: 5px;
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            </style>
+    </head>
+
+<body>
+
+<!-- Menu de navegacion-->
+    <div class="menu">
+        <a href="index.html"><img src="logo.png" alt="Inicio"></a>
+        <a href="vuelos.html">Vuelos</a>
+        <a href="hoteles.html">Hoteles</a>
+        <a href="vuelo+hotel.html">Vuelo + Hotel</a>
+        <a href="contacto.html">Contacto</a>
+        
+    </div>
+
+<!-- Titulo que sale al abrir la pagina, titulo del bloque 1-->
+
+    <div class="titulo">
+        <h1>Busca. Reserva. Viaja.</h1>
+    </div>
+
+<!-- Buscador que sale al abrir la pagina, bloque 1-->
+
+    <div class="buscador">
+        <!--primera linea bloque formulario-->
+        <form action="resultados-vuelos.html" method="post">
+            
+            <input type="radio" value="idayvuelta">Ida y vuelta<input type="radio" value="ida">Solo ida
+
+            <select name="tipo-turista">
+
+                <option value="turista">Turista</option> 
+                <option value="turista_superior">Turista superior</option> 
+                <option value="business">Business</option> 
+                <option value="primera">Primera</option> 
+
+            </select>
+
+            <input type="checkbox" value="directos" name="vuelos directos">Solo vuelos directos<br>
+
+        <!--segundo apartado-->
+
+            <label for="origen">Origen:</label>
+            <input type="text" id="origen" name="origen">
+
+            <label for="destino">Destino:</label>
+            <input type="text" id="destino" name="destino"><br>
+
+            <label for="fecha_salida">Fecha de salida:</label>
+            <input type="date" id="fecha_salida" name="fecha_salida">
+
+            <label for="fecha_regreso">Fecha de regreso:</label>
+            <input type="date" id="fecha_regreso" name="fecha_regreso"><br>
+
+            <input type="submit" value="Buscar vuelos">
+        </form>
+    </div>
+
+<!-- titulo mejores ofertas-->
+
+<div class="titulo-ofertas">
+    <h1>OFERTAS EXCLUSIVAS</h1>
+</div>
+<!-- segundo bloque, OFERTAS EXCLUSIVAS-->
+
+<div class="mejores-ofertas">
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/paris.jpg" alt="París">
+            <p>París <del style="color: red;">€500</del> <span style="color: gold;">€400</span></p>
+        </div>
+    </a>
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/ibiza.jpg" alt="Ibiza">
+            <p>Ibiza <del style="color: red;">€300</del> <span style="color: gold;">€250</span></p>
+        </div>
+    </a>
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/roma.jpg" alt="Roma">
+            <p>Roma <del style="color: red;">€400</del> <span style="color: gold;">€350</span></p>
+        </div>
+    </a>
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/tenerife.jpg" alt="Tenerife">
+            <p>Tenerife <del style="color: red;">€350</del> <span style="color: gold;">€300</span></p>
+        </div>
+    </a>
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/palma.jpg" alt="Palma de Mallorca">
+            <p>Palma de Mallorca <del style="color: red;">€380</del> <span style="color: gold;">€320</span></p>
+        </div>
+    </a>
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/londres.jpg" alt="Londres">
+            <p>Londres <del style="color: red;">€450</del> <span style="color: gold;">€400</span></p>
+        </div>
+    </a>
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/bruselas.jpg" alt="Bruselas">
+            <p>Bruselas <del style="color: red;">€420</del> <span style="color: gold;">€380</span></p>
+        </div>
+    </a>
+    <a href="resultados-vuelos.html">
+        <div class="caja">
+            <img src="destinos/bucarest.jpg" alt="Bucarest">
+            <p>Bucarest <del style="color: red;">€320</del> <span style="color: gold;">€280</span></p>
+        </div>
+    </a>
+</div>
+
+
+<!-- La app de viajes mejor valorada, tercer bloke-->
+
+
+
+<div class="valoracion">
+
+
+    <div class="valoracion-item">
+        <h3>Escaner de equipaje de mano</h3>
+        <p>¿Quieres saber si tu equipaje entra en cabina?<br>
+        Escanea tu equipaje con tu móvil y comprueba si<br>
+        cumple con el tamaño requerido por la aerolínea.</p>
+        <img src="info/maletas.png" alt="maletas">
+        
+    </div>
+
+    <div class="valoracion-item">
+        <h3>Localiza cualquier vuelo en directo</h3>
+        <p>Toda la información sobre cualquier vuelo del<br>
+        mundo, tanto si vuelas en él como si no.</p>
+        <img src="info/avion.png" alt="avion">
+    </div>
+
+    <div class="valoracion-item">
+        <h3>Códigos de descuentos exclusivos para la app</h3>
+        <p>Ahorra incluso más en tu viaje reservando con los<br>
+        códigos de descuentos exclusivos para la app.</p>
+        <img src="info/descuento.png" alt="descuento">
+    </div>
+</div>
+
+<div class="valoracion2">
+    <div class="valoracion-item">
+        <h3>Te hacemos el check-in</h3>
+        <p>Pide tus tarjetas de embarque en un solo clic y te<br>
+            haremos todos los check-ins en cuanto la<br>
+            facturación esté disponible. Te enviaremos tus<br>
+            tarjetas de embarque por e-mail.</p>
+            <img src="info/qr.png" alt="qr">
+    </div>
+
+    <div class="valoracion-item">
+        <h3>¡No te pierdas las actualizaciones de tus vuelos!</h3>
+        <p>Recibirás gratuitamente actualizaciones en tiempo<br>
+            real sobre los horarios de tus vuelos, puertas de<br>
+            embarque, cintas de recogida de equipaje y mucho<br>más.</p>
+            <img src="info/comentarios.png" alt="comentarios">
+    </div>
+
+    <div class="valoracion-item">
+        <h3>Más opciones de viaje que nadie</h3>
+        <p>Comparamos más de 2 000 000 de opciones de<br>
+            alojamiento, más de 900 compañías de alquiler de<br>
+            coche y más de 600 aerolíneas.</p>
+        <img src="info/opciones.png" alt="opciones">   
+    </div>
+</div>
+
+<div class="redes">
+    <div class="redes-item">
+        <h3>Las mejores ofertas en tu teléfono móvil</h3>
+        <p>Reserva tu viaje estés donde estés, directamente<br>
+            desde tu móvil. Descárgate la app de Viajes Trujillo y<br>
+            ¡disfruta viajando!<br></p>
+
+        <a href="https://www.apple.com/app-store/" target="_blank"><img src="redes/ios.png" alt="ios"></a>
+        <a href="https://play.google.com/store" target="_blank"><img src="redes/google-play.png" alt="google-play"></a>
+    </div>
+
+    <div class="redes-item">
+        <h3>¡Síguenos en nuestras redes sociales!</h3>
+        <p>¿Quieres estar al tanto de las últimas noticias y<br>
+            mejores ofertas de viajes? ¡Síguenos!<br></p>
+        
+        <a href="https://www.facebook.com/" target="_blank"><img src="redes/facebook.png" alt="facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="redes/instagram.png" alt="instagram"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="redes/twitter.png" alt="twitter"></a>
+        <a href="https://www.tumblr.com/" target="_blank"><img src="redes/tumblr.png" alt="tumblr"></a>
+        <a href="https://www.pinterest.com/" target="_blank"><img src="redes/pinterest.png" alt="pinterest"></a>
+        
+    </div>
+
+    <div class="redes-item">
+        <h3>¿Buscas inspiración para tu próximo viaje?</h3>
+        <p>¡Prepárate para tu próxima aventura!<br>
+            Si necesitas inspiración e información práctica para<br>
+            tus vacaciones, echa un vistazo al blog de viajes de<br>
+            Viajes Trujillo.</p>     
+    </div>
+</div>
+
+<!--PArte de abajo, terminos y condiciones-->
+<div class="terminosycondiciones">
+    <img src="logo.png" alt="Logo" style="width: 300px; height: auto; margin-bottom: 20px;">
+    <p style="color: whitesmoke; font-size: 18px;">
+         <strong><a href="terminosycondiciones.html">Términos y condiciones generales</a>  |  <a href="terminosycondiciones.html">Uso de cookies</a>  |  <a href="terminosycondiciones.html">Política de privacidad</a></strong><br>
+    </p>
+    <p style=" color: whitesmoke; font-size: 16px;">
+        *Comparación de vuelos realizada utilizando la tarifa básica (servicios complementarios excluidos) para el mismo número de vuelo. Referencia mensual de 20 000 vuelos comparados de media.<br><br>
+        * Comparación de hoteles realizada utilizando la tarifa básica para el mismo tipo de habitación y las mismas fechas de viaje.<br><br>
+        El precio más bajo 9 de cada 10 veces de media tanto en vuelos como en hoteles. En el caso poco probable de que encuentres un precio más bajo, te ofrecemos nuestra Garantía de mejor precio.<br><br>
+        © 2023 - 2023 Viajes Trujillo. Todos los derechos reservados. Vacaciones Viajes Trujillo, S. L. (Sociedad Unipersonal). Domicilio social (no abierto al público): Calle de Manzanares, nº 4, Planta 1º, Oficina 108, 28005, Madrid, España. CIF: ESB-61965778. Registro Mercantil de Madrid, Tomo 36897, Folio 121, Hoja M-660117. Licencia de agencia de viajes CICMA 3682 y agente acreditado IATA. Atención al cliente: utiliza nuestro <a href="contacto.html">Centro de Ayuda</a> o contactar con nuestros agentes desde <a href="contacto.html">aquí.</a>
+         
+    </p>
+</div>
+</body>
+
+</html>

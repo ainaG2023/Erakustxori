@@ -1,0 +1,125 @@
+/* reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* espaciado entre logo, menú y usuario */
+    align-items: center;
+    background-color: #8e8888;
+    /* fondo */
+    padding: 10px 20px;
+    height: 80px;
+    position: fixed;
+    /* fija el navbar arriba */
+    top: 0;
+    /* posición en la parte superior */
+    left: 0;
+    /* asegura que quede alineado a la izquierda */
+    width: 100%;
+    /* hace que ocupe todo el ancho de la página */
+    z-index: 1000;
+    /* coloca el navbar sobre otros elementos */
+}
+
+/* logo */
+#logo img {
+    display: block;
+    height: auto;
+}
+
+/* estilo de lista */
+ul {
+    list-style: none;
+    /* eliminar viñetas de lista */
+    display: flex;
+    gap: 150px;
+    /* espaciado entre elementos del menú (ul) */
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* animación */
+}
+
+ul li a:hover {
+    background-color: #373636;
+    /*  hover */
+}
+
+/* tabla de horarios */
+table {
+    margin: 100px auto;
+    /* espacio para en navbar y autocentrado */
+    margin-top: 300px;
+    border-collapse: collapse;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 10px rgba(243, 243, 243, 0.021);
+    color: white;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ac5c5c;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* botón */
+.btn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* select */
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* video de fondo */
+.background-video {
+    position: fixed;
+    /* fija el video al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* ocupa todo el ancho de la ventana */
+    height: 100%;
+    /* ocupa toda la altura de la ventana */
+    object-fit: cover;
+    /* el video cubre todo el fondo */
+    z-index: -1;
+    /* coloca el video detrás de todo el contenido */
+}

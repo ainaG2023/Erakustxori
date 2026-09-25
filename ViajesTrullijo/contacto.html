@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+<meta charset="UTF-8">
+        <title>Viajes Trujillo</title>
+        <link rel="icon" href="icono.png" type="image/png">
+        <style>
+
+            body {
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-image: url("fondo-otros.jpg");
+                    }
+/* Menu y todo lo relacionado */
+            .menu {
+                background-color: rgba(0, 0, 0, 0.65);
+                position: fixed;
+                width: 100%;
+                height: 82px;
+                top: 0;
+                left: 0;
+                right: 0;
+                
+            }
+            
+            .menu a {
+                color: rgb(255, 255, 255);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 16px;
+                font-weight: bold; 
+                text-decoration: none;
+                position: relative;
+                padding: 32px 32px;
+                vertical-align: middle;
+                
+            }
+
+            .menu img {
+                width: auto;
+                height: 82px;
+                display: inline;
+                padding: 0;
+                vertical-align: middle;
+            }
+
+            .menu a:hover:not(:has(img)) {  
+                background-color: rgba(0, 0, 0, 0.85);
+            }
+            
+            .menu .activo {
+                background-color: rgba(0, 0, 0, 0.85);
+            }
+
+        .main-content {
+            padding: 20px;
+            margin-top: 60px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+        .section .block {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 2%;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px; /* Bordes redondos */
+        margin-bottom: 20px; /* Espacio debajo de los bloques */
+    }
+
+        .faq {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        input[type="text"], textarea {
+            width: 96%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+            </style>
+    </head>
+
+<body>
+
+<!-- Menu de navegacion-->
+    <div class="menu">
+        <a href="index.html"><img src="logo.png" alt="Inicio"></a>
+        <a href="vuelos.html">Vuelos</a>
+        <a href="hoteles.html">Hoteles</a>
+        <a href="vuelo+hotel.html">Vuelo + Hotel</a>
+        <a class="activo" href="contacto.html">Contacto</a>
+        
+    </div>
+<!-- Contenido principal -->
+<div class="main-content">
+
+    <!-- Bloque 3: ¿Cómo podemos ayudarte?-->
+    <div class="section">
+        <h2>¿Cómo podemos ayudarte?</h2>
+        <div class="block">
+            <h3>📰Información de facturación</h3>
+            <p>Ver datos de facturación y solicitar facturas</p>
+        </div>
+        <div class="block">
+            <h3>🎫Check-in</h3>
+            <p>Ver información de check-in</p>
+        </div>
+        <div class="block">
+            <h3>🖍️Modificar o cancelar mi viaje</h3>
+            <p>Cambios y cancelaciones de vuelos</p>
+        </div>
+        <div class="block">
+            <h3>🗃️Ver datos de pasajeros/as</h3>
+            <p>Revisar tus datos de pasajero/a</p>
+        </div>
+        <div class="block">
+            <h3>🗎Ver documentación</h3>
+            <p>Vuelve a enviar el e-mail de confirmación y más</p>
+        </div>
+        <div class="block">
+            <h3>⭐Ver servicios extra</h3>
+            <p>Reserva un hotel o un traslado, alquila un coche, etc.</p>
+        </div>
+    </div>
+
+    <!-- Bloque 2: Preguntas frecuentes -->
+    <div class="section">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq">
+            <h3>1. ¿Cómo puedo solicitar o hacer el seguimiento de mi reembolso?</h3>
+            <p>Para solicitar o hacer el seguimiento de tu reembolso, puedes acceder a la sección de "Mis Reservas" en tu cuenta. Allí encontrarás la opción para gestionar reembolsos y seguir el estado de tu solicitud. Si necesitas asistencia adicional, nuestro equipo de atención al cliente está disponible las 24 horas del día, los 7 días de la semana.</p>
+    
+            <h3>2. ¿Cómo puedo gestionar mi cuenta Prime?</h3>
+            <p>La gestión de tu cuenta Prime es fácil y conveniente. Inicia sesión en tu cuenta y dirígete a la sección "Configuración de la Cuenta". Allí podrás actualizar tu información personal, cambiar preferencias de notificación y explorar beneficios exclusivos para miembros Prime.</p>
+    
+            <h3>3. ¿Cuál es el equipaje permitido?</h3>
+            <p>Las políticas de equipaje varían según la aerolínea y la clase de tu boleto. Recomendamos verificar las políticas de equipaje de la aerolínea específica en la que estás volando. Puedes encontrar esta información detallada en la sección de "Detalles del Vuelo" durante el proceso de reserva.</p>
+    
+            <h3>4. ¿Qué puedo hacer si la aerolínea cambia o cancela mi vuelo?</h3>
+            <p>En caso de cambios o cancelaciones de vuelo, serás notificado automáticamente a través de la información de contacto proporcionada durante la reserva. Puedes gestionar las opciones disponibles, como reprogramar el vuelo o solicitar un reembolso, a través de la sección "Mis Reservas" en tu cuenta.</p>
+    
+            <h3>5. ¿Cómo puedo seleccionar un asiento?</h3>
+            <p>El proceso de selección de asientos varía según la aerolínea. Durante la reserva, podrás ver un mapa de asientos y seleccionar tu preferencia. Si ya tienes una reserva, puedes gestionar tu asiento a través de la sección "Mis Reservas". Ten en cuenta que algunas aerolíneas pueden aplicar tarifas adicionales por la selección de asientos específicos.</p>
+    
+            <h3>6. ¿Cómo puedo cambiar el nombre de un/a pasajero/a?</h3>
+            <p>Para cambiar el nombre de un/a pasajero/a en tu reserva, ponte en contacto con nuestro equipo de atención al cliente. Proporciona la información detallada de la reserva y el nombre correcto que deseas agregar. Nuestro equipo te guiará a través del proceso y te informará sobre posibles tarifas o restricciones asociadas.</p>
+        </div>
+    </div>
+
+    <!-- Bloque 3: Formulario de contacto -->
+    <div class="section">
+        <h2>¿Necesitas más ayuda? Contacta con nosotros</h2><br>
+        <form action="/enviar_consulta" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            
+            <input type="submit" value="Enviar mensaje">
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

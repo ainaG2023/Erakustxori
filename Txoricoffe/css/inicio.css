@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Espaciado entre logo, menú y usuario */
+    align-items: center;
+    background-color: #8e8888;
+    /* Fondo */
+    padding: 10px 20px;
+    height: 80px;
+    overflow: hidden;
+    /* Evita elementos sobresalientes */
+}
+
+#logo img {
+    display: block;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    /*eliminar viñetas de lista */
+    display: flex;
+    gap: 150px;
+    /* Espaciado de elementos  menú */
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Animación suave */
+}
+
+ul li a:hover {
+    background-color: #373636;
+    /* Efecto hover */
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+}
+
+.usuario .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Hace la imagen circular */
+}
+
+.bienvenida {
+    font-size: 20px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    color: rgb(0, 0, 0);
+    width: 40%;
+}
+
+.imag {
+    background-image: url(../images/cafeteria.jpeg);
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    /* Necesario para posicionar elementos dentro */
+    display: flex;
+    /* Activamos Flexbox */
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+    overflow: hidden;
+    /* Para evitar desbordamientos */
+
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, red, rgb(255, 0, 212), yellow, green, blue, rgb(255, 0, 0), rgb(0, 0, 0));
+    background-size: 300%;
+    /* Extiende el gradiente más lejos del texto */
+    background-clip: text;
+    /* Aplica el gradiente solo al texto */
+    -webkit-background-clip: text;
+    /* Compatibilidad con navegadores webkit */
+    color: transparent;
+    /* fondo del texto transparente */
+    animation: colorScroll 10s infinite linear;
+    /* Animación bucle */
+    margin: 0;
+}
+
+@keyframes colorScroll {
+    0% {
+        background-position: 0% 50%;
+        /* Inicia desde la izquierda */
+    }
+
+    100% {
+        background-position: 100% 50%;
+        /* Termina hacia la derecha */
+    }
+}
+
+a ul li nav:active {
+    color: black;
+}
+
+.ofrecemos-container {
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 2px solid #a10000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ofrecemos-descripcion {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
