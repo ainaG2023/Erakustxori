@@ -1,0 +1,166 @@
+body {
+    background-color:#348043;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+div.menu>span {
+    width: 15%;
+    float: right;
+    padding-top: 10px;
+}
+
+div.menu {
+    background-color: #5aec43;
+    padding: 15px;
+    margin: -10px;
+}
+span>a {
+    text-decoration: none;
+    color:black;
+    border: solid #348043;
+    background-color:#348043;
+    border-radius: 5px;
+}
+
+span>a:focus {
+    text-decoration: underline;
+}
+
+span>a:hover {
+    text-decoration: underline;
+}
+img.logo{
+    border-radius: 8px;
+}
+div.logo {
+    clear: both;
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+div.descripcion {
+    color: white;
+
+}
+
+h2.subtitulo_descripcion {
+    float: left;
+    padding-top: 60px;
+    width: 20%;
+}
+
+p.parrafo_descrip {
+    float: left;
+    width: 50%;
+}
+
+hr.linea2 {
+    clear: both;
+}
+
+div.legal {
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+h2.aviso {
+    text-align: center;
+}
+
+/*div.foto {
+    margin-top: 150px;
+    border-radius: 3px;
+}*/
+td.separador{
+    border-left:solid;
+    color: white;
+}
+p.p_legal2{
+    margin-left:5px;
+}
+
+body.explicacion{
+    background-color: #dbeddc;
+}
+body.form {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+.formulario {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formulario h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.formulario p {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.checkboxes label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #444;
+}
+
+#enviar_form {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#enviar_form:hover {
+    background-color: #218838;
+}

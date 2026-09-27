@@ -1,0 +1,100 @@
+#a1:hover {
+    color: rgb(255, 204, 0);
+}
+
+#ul1 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 80px;
+    font-size: 20px;
+}
+
+#a1 {
+    margin: 10px;
+    color: white;
+}
+
+#a1:link {
+    color: white;
+    display: flex;
+    text-decoration: none;
+
+}
+
+#a1:hover:link {
+    color: rgb(255, 204, 0);
+    transform: scale(1.05);
+}
+
+#foto1:hover {
+    transform: scale(1.05);
+}
+
+#a1:active {
+    color: white;
+}
+
+#header1 {
+    background-color: rgb(37, 37, 37);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    background-color: rgba(46, 40, 40, 255);
+    color: white;
+    margin: 0px;
+
+}
+
+#header1 {
+    background-color: rgba(46, 40, 40, 255);
+
+}
+
+.button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #9f8d02;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(202, 198, 8, 0.867);
+}
+#h21{
+color: white;
+}
+#p1{
+    color:white;
+}
+#name{
+    color:white;
+}
+#email{
+    color:white;
+}
+#message{
+    color:white;
+}
+.blanko{
+    color:white;
+}
+.container {
+    width: 1200px;
+    margin: auto;
+    position: absolute; 
+    border-radius: 8px;     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el contenedor */
+    text-align: center;    
+}

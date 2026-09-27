@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Necesitas ayuda?</title>
+    <link type="text/css" rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="menu">
+        <a href="index.html"><img class="boton_inicio" src="inicio.png" height="35px" width="35px"></a>
+        <span class="boton1"><a href="tipos.html">Tipos de consumibles</a></span>
+        <span class="boton2"><a href="formulario.html">Necesitas ayuda?</a></span>
+    </div>
+    <div class="formulario">
+        <h1>¿Necesitas ayuda? ¡Desintoxicate!</h1>
+        <p class="p1">
+            Rellena el siguiente formulario y te contactaremos lo antes posible para ayudarte con tu problema
+        </p><br />
+        <form action="#" method="post" id="formulario_detox">
+            <label for="nom">Nombre:</label>
+            <input type="text" name="nombre" id="nom" class="form22" placeholder="Tu nombre">
+            
+            <label for="sub">Apellido:</label>
+            <input type="text" name="apellido" id="sub" class="form22" placeholder="Tu apellido">
+            
+            <label for="num">Número de teléfono:</label>
+            <input type="number" name="numero_telefono" id="num" class="form22" placeholder="123456789" maxlength="9">
+            
+            <label for="dni">DNI (número):</label>
+            <input type="number" id="dni" class="form22" maxlength="8" placeholder="DNI">
+            
+            <label for="l_dni">DNI (letra):</label>
+            <input type="text" id="l-dni" class="form22" maxlength="1" placeholder="Letra">
+            
+            <label>¿Qué consumes?</label>
+            <div class="checkboxes">
+                <label><input type="checkbox"> LSD</label>
+                <label><input type="checkbox"> Fentanilo</label>
+                <label><input type="checkbox"> Cannabis</label>
+                <label><input type="checkbox"> Anfetaminas</label>
+            </div>
+            
+            <textarea id="cant" maxlength="500" placeholder="Describa brevemente cuánto consume"></textarea>
+            
+            <label for="ciudad">Ciudad de residencia:</label>
+            <input type="text" id="ciudad" class="form22" placeholder="Tu ciudad">
+            
+            <label for="direc">Dirección de residencia:</label>
+            <input type="text" id="direc" class="form22" placeholder="Tu dirección">
+            
+            <input type="submit" value="Enviar" id="enviar_form">
+        </form>
+    </div>
+</body>
+</html>

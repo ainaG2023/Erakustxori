@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+
+</head>
+
+<body>
+    <header id="header1">
+        <nav>
+
+            <div id="div2"><a id="afoto" href="index.html"><img id="foto1" src="imagen.jpg" width="200px"
+                        height="50px"></a></div>
+
+            <ul id="ul1">
+                <li><a id="a1" href="inicio.html">Inicio</a></li>
+                <li><a id="a1" href="Prestamos.html">Prestamos</a></li>
+                <li><a id="a1" href="Menu.html">Menu</a></li>
+                <li><a id="a1" href="Contacto.html">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header><br>
+    <di>Rellena Este Formulario Para Completar El Registro</di>
+    <fieldset>
+        <br>
+        <label for="nom1">Nombre:</label><input id="nom1" type="text" required><br><br>
+        <label for="ape1">Apellidos:</label><input id="ape1" type="text" required><br><br>
+        <label for="localidad">Localidad:</label>
+        <input type="text" id="ciudad" list="ciudades" placeholder="Escribe tu ciudad" required>
+        <datalist id="ciudades">
+            <option value="Bilbo">
+            <option value="Donosti">
+            <option value="Gazteiz">
+            <option value="Iruña">
+        </datalist>
+        <button type="button" onclick="validarCiudad()">Validar</button><br><br>
+        <h3 id="error-message" style=" display: none;"></h3>
+        <script>
+            function validarCiudad() {
+                var ciudadIngresada = document.getElementById('ciudad').value;
+                var localidadesValidas = ['Bilbo', 'Donosti', 'Gazteiz', 'Iruña'];
+                var errorMessage = document.getElementById('error-message');
+                var encontrado = false;
+
+                for (var i = 0; i < localidadesValidas.length; i++) {
+                    if (localidadesValidas[i].toLowerCase() === ciudadIngresada.toLowerCase()) {
+                        encontrado = true;
+                        break;
+                    }
+                }
+                if (encontrado) {
+                    errorMessage.style.display='none';
+                } else {    
+                    errorMessage.style.display = 'block';
+                    errorMessage.textContent = "La ciudad no esta en la lista";
+                }
+            }
+        </script>
+        <label for="gmail">Escribe tu Gmail:</label><input type="email" id="gmail"><br><br>
+        <!--<button type="button" onclick="validarCorreo()">Validar</button>
+        <h3 id="errorgmail" style="color:red; display: none;"></h3>
+        <script>
+            function validarCorreo() {
+                var correo = document.getElementById('gmail').value;
+                var errorgmail = document.getElementById('errorgmail');
+    
+               
+                if (correo.includes('@gmail.com') || correo.includes('@txorierri.com')) {
+                    errorgmail.style.display='none';
+                } else {
+                    errorgmail.style.display = 'block';
+                    errorgmail.textContent = 'El Gmail no es válido.';
+                    
+                }
+            }
+        </script> -->
+        <label>Contraseña:</label><input type="password" id="password" required><br><br>
+        <button type="submit">Enviar</button>
+
+
+
+    </fieldset>
+
+</body>
+
+</html>
