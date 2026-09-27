@@ -1,0 +1,69 @@
+body{
+    margin: 0px;
+}
+header{
+    background-color: #cf4d4f;
+    height: 80px;
+    align-items: center;   
+}  
+#logo{
+    width: 80px;
+    float: left;
+}
+#profile{
+    width: 30px;
+    padding-top: 10px;
+}
+li{
+    display: inline-block;
+    list-style: none;
+    padding-left: 120px;
+}
+#lista{
+    margin-top: 17px;
+}
+#barraup{
+    float: right;
+    margin-right: 30px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: auto;
+    gap: 1em;
+}
+#grid>img{
+    padding-left: 150px;
+    padding-top: 30px;
+}
+.texto{
+    margin-top: 80px;
+    margin-right: 80px;
+}
+button{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 30px;
+}
+.precio{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.oferta{
+    text-decoration: line-through;
+    color: red;
+    
+}
+#imgpeq{
+    width: 530px;
+}
+a:visited,a:link{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: darkblue;
+}

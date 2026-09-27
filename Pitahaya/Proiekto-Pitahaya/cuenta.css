@@ -1,0 +1,11 @@
+fieldset {
+    width: 300px;
+    padding: 40px;
+    background-color: #ff6962;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  button{
+    float: right;
+    background-color: #cf4d4f ;
+  }

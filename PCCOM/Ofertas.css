@@ -1,0 +1,100 @@
+/* Estilos para la página web */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkgray;
+    background-image:url(imagenes/fondo.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .contenedor-imagenes {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .imagen {
+    text-align: center;
+    background-color: #ddd;
+    border-radius: 10%;
+    padding: 5%;
+  }
+  
+  .imagen img {
+    width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .imagen p {
+    margin: 10px 0;
+  }
+  
+  del{
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  del {
+    color: red;
+  }
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-btn {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown-container:focus-within .dropdown-content {
+    display: block;
+  }

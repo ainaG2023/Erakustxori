@@ -1,0 +1,10 @@
+*{padding: 0;
+margin: 0;}
+
+h1{text-align: center;
+background-color: black;
+color: aliceblue;
+padding: 20px;}
+#horarios{border-top: 3px solid black;}
+.home{text-decoration: none;
+color: black;}

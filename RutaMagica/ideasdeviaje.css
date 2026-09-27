@@ -1,0 +1,24 @@
+div.Galeria{margin: 10px 20px;
+box-shadow: 0 4px 8px 0 lightskyblue, 0 6px 20px 0 black;
+float: left;
+width: 350px;
+}
+
+div.Galeria img{width: 100%;
+height: auto;}
+
+div.Galeria:hover{border: 1px solid lightcoral;
+transform: rotate(-3deg);}
+div.pie{text-align: center;
+        text-shadow: 2px 2px 5px purple;
+    padding: 10px;}
+h1{text-align: center;
+background-color: black;
+color: aliceblue;}
+.foto{width: 350px;
+height: 300px;}
+.volver{text-decoration: none;
+        color: black;}
+
+
+
